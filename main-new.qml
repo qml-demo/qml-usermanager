@@ -68,7 +68,7 @@ ApplicationWindow {
                                 Layout.alignment: Qt.AlignLeft
                                 Layout.preferredWidth: parent.width
                                 placeholderText: "过滤条件"
-                                color: theme.primaryColor
+                                color: "#259ce9"
                             }
                         }
 
@@ -177,7 +177,7 @@ ApplicationWindow {
                             Layout.leftMargin: Units.dp(30)
                             Layout.rightMargin: Units.dp(30)
                             Layout.bottomMargin: Units.dp(30)
-//                            Layout.topMargin: Units.dp(-41)
+                            Layout.topMargin: Units.dp(-41)
                             border.color: "#e5e5e5"
 //                            clip: true
                             elevation: 1
@@ -228,7 +228,7 @@ ApplicationWindow {
                                     height: Units.dp(70)
                                     Rectangle{
                                         anchors.fill: parent
-                                        color: index%2==0?"white":"#e0e0e0"
+                                        color: index%2==0?"white":"#f1f1f1"
                                     }
                                     Ink{
                                         anchors.fill: parent
@@ -434,7 +434,7 @@ ApplicationWindow {
                             action:Label {
                                 anchors.bottom: parent.bottom
                                 style:addLabelFont
-                                text: "职称："
+                                text: "职称:"
                             }
                             content: TextField {
                                 id: add_deptname
@@ -450,7 +450,7 @@ ApplicationWindow {
                             action:Label {
                                 anchors.bottom: parent.bottom
                                 style:addLabelFont
-                                text: "科室"
+                                text: "科室:"
                             }
                             content: TextField {
                                 id: add_sectiono
