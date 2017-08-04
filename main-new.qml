@@ -35,7 +35,7 @@ ApplicationWindow {
             elevation: 1
             border.color: Qt.rgba(0,0,0,0.1)
             radius: 5
-
+            backgroundColor: "white"
             RowLayout {
                 id: rowloyout
                 anchors.fill: parent
@@ -115,7 +115,7 @@ ApplicationWindow {
                                     width: ListView.view.width
                                     height: Units.dp(60)
                                     Rectangle{
-                                        color: theme.primaryColor
+                                        color: "#259ce9"
                                         anchors.fill: parent
                                     }
                                     RowLayout {
@@ -164,6 +164,7 @@ ApplicationWindow {
                                             color: userListHeadFontColor
                                         }
                                     }
+
                                 }
                             }
                         }
@@ -176,7 +177,7 @@ ApplicationWindow {
                             Layout.leftMargin: Units.dp(30)
                             Layout.rightMargin: Units.dp(30)
                             Layout.bottomMargin: Units.dp(30)
-                            Layout.topMargin: Units.dp(-41)
+//                            Layout.topMargin: Units.dp(-41)
                             border.color: "#e5e5e5"
 //                            clip: true
                             elevation: 1
@@ -265,12 +266,13 @@ ApplicationWindow {
                                                 text: deptName
                                                 style: addLabelFont
                                             }
-                                            Button{
+                                            Label{
                                                 Layout.preferredWidth: Units.dp(80)
                                                 anchors.verticalCenter: parent.verticalCenter
-                                                backgroundColor: userStatus == '激活'?'#259ce9':'#eee'
-                                                textColor: userStatus == '激活'? 'white' : '#666'
+                                                color: userStatus == '激活'? '#259ce9' : '#999'
                                                 text: userStatus
+                                                style: addLabelFont
+
                                             }
                                             View {
                                                 Layout.fillWidth: true
@@ -282,6 +284,7 @@ ApplicationWindow {
                                                 clip: true
                                                 border.color: "#eee"
                                                 elevation: 1
+                                                backgroundColor: "white"
                                                 Label {
                                                     height: parent.height-10
                                                     width: parent.width-20
@@ -299,7 +302,7 @@ ApplicationWindow {
                                                     Layout.preferredWidth: Units.dp(60)
                                                     Layout.leftMargin: Units.dp(20)
                                                     anchors.verticalCenter: parent.verticalCenter
-                                                    backgroundColor: "#eee"
+                                                    backgroundColor: "#f1f1f1"
                                                     textColor: "#666"
                                                     elevation: 1
                                                     text: "编辑"
@@ -329,6 +332,7 @@ ApplicationWindow {
                                                     }
                                                 }
                                             }
+
                                             Dialog {
                                                 id: alertDeleteBar
                                                 width: Units.dp(300)
@@ -397,14 +401,14 @@ ApplicationWindow {
                             action:Label {
                                 anchors.bottom: parent.bottom
                                 style:addLabelFont
-                                text: "用户名："
+                                text: "姓名:"
                             }
                             content: TextField {
                                 id: add_username
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         ListItem.Standard {
@@ -413,14 +417,14 @@ ApplicationWindow {
                             action:Label {
                                 anchors.bottom: parent.bottom
                                 style:addLabelFont
-                                text: "工号"
+                                text: "工号:"
                             }
                             content: TextField {
                                 id: add_jobnumber
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
 
                         }
@@ -436,8 +440,8 @@ ApplicationWindow {
                                 id: add_deptname
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         ListItem.Standard {
@@ -452,8 +456,8 @@ ApplicationWindow {
                                 id: add_sectiono
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         ListItem.Standard {
@@ -468,8 +472,8 @@ ApplicationWindow {
                                 id: add_password
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         ListItem.Standard {
@@ -485,8 +489,8 @@ ApplicationWindow {
                                 id: add_userstatus
                                 width: parent.width
                                 anchors.centerIn: parent
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         ListItem.Standard {
@@ -494,7 +498,7 @@ ApplicationWindow {
                             clip: true
                             Button{
                                 width: parent.width*0.9
-                                backgroundColor: theme.primaryColor
+                                backgroundColor: "#259ce9"
                                 anchors.centerIn: parent
                                 text:"录入指纹"
                                 onClicked: {
@@ -508,14 +512,14 @@ ApplicationWindow {
                             action:Label {
                                 anchors.bottom: parent.bottom
                                 style:addLabelFont
-                                text:"备注："
+                                text:"备注:"
                             }
                             content: TextField {
                                 id: add_remarko
                                 anchors.centerIn: parent
                                 width: parent.width
-                                color: theme.primaryColor
-                                font.pixelSize: 10
+                                color: "#259ce9"
+                                font.pixelSize: Units.dp(16)
                             }
                         }
                         Button {
@@ -523,7 +527,7 @@ ApplicationWindow {
                             Layout.alignment: Qt.AlignCenter
                             text: "添加"
                             textColor: "white"
-                            backgroundColor: Theme.primaryColor
+                            backgroundColor: "#259ce9"
                             Layout.bottomMargin: 10
                             elevation: 1
                             onClicked: {
@@ -565,5 +569,6 @@ ApplicationWindow {
                 }
             }
         }
+
     }
 }
